@@ -31,6 +31,13 @@ public class PocketbookApplication implements CommandLineRunner{
 		 
 		
 	}
+	@Bean
+    public ViewResolver viewResolver() {
+         final InternalResourceViewResolver r = new InternalResourceViewResolver();
+         r.setPrefix("/WEB-INF/jsp/");
+         r.setSuffix(".jsp");
+         return r;
+    }
 
 
 }
